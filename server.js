@@ -55,33 +55,13 @@ db.exec(`
 
 // ── デフォルトメンバーの初期投入（初回のみ） ───────────────────────────
 const DEFAULT_MEMBERS = [
-    {id:1, name:'嶋崎 拓',     category:'白物',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:['週4~']},
-    {id:2, name:'牧 裕史',     category:'生活雑貨',skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:3, name:'藤川 尚',     category:'ホビー',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:4, name:'岸本 純一',   category:'キッチン',skill:'上級',shiftStart:10,shiftEnd:19,conditions:['週5']},
-    {id:5, name:'藤川 拓也',   category:'白物',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:['週5']},
-    {id:6, name:'岡田 野楓',   category:'コスメ',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:['コスメ機材']},
-    {id:7, name:'畑中 名月',   category:'コスメ',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:['コスメ機材']},
-    {id:8, name:'三品 賢太',   category:'黒物',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:9, name:'對馬 光',     category:'生活雑貨',skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:10,name:'遠藤 沙矢',   category:'コスメ',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:['コスメ機材','モデルOK']},
-    {id:11,name:'森 みどり',   category:'ホビー',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:12,name:'松島 菜南絵', category:'キッチン',skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:13,name:'石橋 和磨',   category:'コスメ',  skill:'中級',shiftStart:10,shiftEnd:19,conditions:['コスメ機材']},
-    {id:14,name:'川浪 優希',   category:'ホビー',  skill:'中級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:15,name:'石川 和仁',   category:'ヘルス',  skill:'中級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:16,name:'宮下 梨菜',   category:'生活雑貨',skill:'中級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:17,name:'米本 拓真',   category:'キッチン',skill:'中級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:18,name:'冨永 風馬',   category:'キッチン',skill:'中級',shiftStart:10,shiftEnd:19,conditions:['モデルOK']},
-    {id:19,name:'沼田 瑞紀',   category:'ヘルス',skill:'中級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:20,name:'森田 敬子',   category:'ヘルス',skill:'中級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:21,name:'笹木 美香',   category:'ホビー',skill:'中級',shiftStart:10,shiftEnd:19,conditions:['モデルOK']},
-    {id:22,name:'石飛 杏実',   category:'生活雑貨',skill:'中級',shiftStart:10,shiftEnd:19,conditions:['モデルOK']},
-    {id:23,name:'松谷 平蔵',   category:'ホビー',  skill:'初級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:24,name:'土屋 萌笑',     category:'白物',  skill:'初級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:25,name:'北林 梨子',   category:'コスメ',  skill:'初級',shiftStart:10,shiftEnd:19,conditions:[]},
-    {id:26,name:'所 優里',     category:'ヘルス',  skill:'初級',shiftStart:10,shiftEnd:19,conditions:['モデルOK']},
-
+    {id:1, name:'田中 英治',     category:'企画',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:['週4~']},
+    {id:2, name:'大橋 辰徳',     category:'デザイン',skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
+    {id:3, name:'藤川 芳雄',     category:'撮影',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
+    {id:4, name:'齋藤 純三',   category:'開発',skill:'上級',shiftStart:10,shiftEnd:19,conditions:['週5']},
+    {id:5, name:'所沢 卓郎',   category:'開発',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:['週5']},
+    {id:6, name:'坂本 楓',   category:'営業',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
+    {id:7, name:'徳重 那月',   category:'営業',  skill:'上級',shiftStart:10,shiftEnd:19,conditions:[]},
 ];
 
 const memberCount = db.prepare('SELECT COUNT(*) as c FROM members').get().c;
