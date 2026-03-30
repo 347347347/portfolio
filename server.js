@@ -22,7 +22,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.static(__dirname)); // serve index.html
 
 // ── DB初期化 ──────────────────────────────────────────────────────────────
-const db = new Database(DB_PATH);
+const db = new Database(':memory:');
 
 db.exec(`
   PRAGMA journal_mode=WAL;
